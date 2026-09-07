@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devassist-ai"
+version = "0.1.0"
+description = "A version-aware, citation-grounded Python/AI support agent."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "DevAssist AI Contributors" }]
+dependencies = [
+  "fastapi>=0.115,<1.0",
+  "uvicorn>=0.30,<1.0",
+  "pydantic>=2.9,<3.0",
+  "numpy>=1.26,<3.0",
+  "scikit-learn>=1.5,<2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.27,<1.0",
+  "pytest>=8.3,<10.0",
+  "pytest-cov>=6.0,<8.0",
+  "build>=1.2,<2.0",
+  "ruff>=0.9,<1.0",
+  "mypy>=1.14,<2.0",
+]
+ai = [
+  "sentence-transformers>=3.3,<6.0",
+]
+
+[project.scripts]
+devassist = "devassist.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+devassist = ["static/*"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers --strict-config"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["devassist"]
+branch = true
+relative_files = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 80
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests", "scripts"]
+extend-exclude = [".pytest-tmp-*"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["B008", "RUF001"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["devassist"]
+exclude = ["tests"]
+
+[[tool.mypy.overrides]]
+module = ["numpy", "numpy.*", "sklearn", "sklearn.*"]
+follow_imports = "skip"
+ignore_missing_imports = true

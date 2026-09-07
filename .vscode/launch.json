@@ -1,0 +1,58 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "DevAssist: API (debug)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "devassist.api.app:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000",
+        "--reload"
+      ],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "DevAssist: Offline evaluation",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/evaluate.py",
+      "args": [
+        "--output",
+        "reports/evaluation.json",
+        "--fail-on-threshold"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "DevAssist: Train reranker",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/train_reranker.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "DevAssist: Offline benchmark",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/benchmark.py",
+      "args": [
+        "--requests",
+        "200",
+        "--concurrency",
+        "20",
+        "--output",
+        "reports/benchmark.json"
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
+}

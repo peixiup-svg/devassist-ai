@@ -1,0 +1,66 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "DevAssist: setup environment",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/scripts/setup.ps1"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "DevAssist: test",
+      "type": "shell",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "-m",
+        "pytest",
+        "--cov=devassist",
+        "--cov-report=term-missing"
+      ],
+      "options": {
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}/src"
+        }
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "DevAssist: evaluate",
+      "type": "shell",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "${workspaceFolder}/scripts/evaluate.py",
+        "--fail-on-threshold",
+        "--output",
+        "reports/evaluation.json"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "DevAssist: benchmark",
+      "type": "shell",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "${workspaceFolder}/scripts/benchmark.py",
+        "--requests",
+        "200",
+        "--concurrency",
+        "20",
+        "--output",
+        "reports/benchmark.json"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

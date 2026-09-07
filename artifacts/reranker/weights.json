@@ -1,0 +1,17 @@
+{
+  "fused": 0.37271558,
+  "body_overlap": 0.24250501,
+  "title_overlap": 0.12600426,
+  "code_signal": 0.11177516,
+  "version": 0.084,
+  "authority": 0.063,
+  "_metadata": {
+    "generated_at": "2026-09-06T13:31:18.374631+00:00",
+    "training_pairs": 40,
+    "positive_pairs": 20,
+    "hard_negative_pairs": 20,
+    "training_accuracy": 1.0,
+    "blend_with_safe_defaults": 0.3,
+    "warning": "Training accuracy is a pipeline check, not a held-out quality claim."
+  }
+}

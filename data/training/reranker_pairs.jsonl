@@ -1,0 +1,40 @@
+{"query":"torch.cuda.is_available false CPU wheel","document_id":"pytorch-cuda-unavailable","label":1,"requested_version":"2.6"}
+{"query":"torch.cuda.is_available false CPU wheel","document_id":"pytorch-state-dict","label":0,"requested_version":"2.6"}
+{"query":"model tensor cpu cuda same device RuntimeError","document_id":"pytorch-device-mismatch","label":1,"requested_version":"2.6"}
+{"query":"model tensor cpu cuda same device RuntimeError","document_id":"pytorch-cuda-oom","label":0,"requested_version":"2.6"}
+{"query":"Windows DataLoader spawn main num_workers","document_id":"pytorch-windows-dataloader","label":1,"requested_version":"2.6"}
+{"query":"Windows DataLoader spawn main num_workers","document_id":"transformers-tokenizer-parallelism","label":0,"requested_version":"2.6"}
+{"query":"显存不足 inference memory graph","document_id":"pytorch-cuda-oom","label":1,"requested_version":"2.6"}
+{"query":"显存不足 inference memory graph","document_id":"pytorch-device-mismatch","label":0,"requested_version":"2.6"}
+{"query":"torch.load weights_only PyTorch 2.6 error","document_id":"pytorch-load-weights-26","label":1,"requested_version":"2.6"}
+{"query":"torch.load weights_only PyTorch 2.6 error","document_id":"pytorch-load-weights-25","label":0,"requested_version":"2.6"}
+{"query":"torch.load old default 2.5 pickle","document_id":"pytorch-load-weights-25","label":1,"requested_version":"2.5"}
+{"query":"torch.load old default 2.5 pickle","document_id":"pytorch-load-weights-26","label":0,"requested_version":"2.5"}
+{"query":"missing unexpected keys module prefix","document_id":"pytorch-state-dict","label":1,"requested_version":"2.6"}
+{"query":"missing unexpected keys module prefix","document_id":"pytorch-device-mismatch","label":0,"requested_version":"2.6"}
+{"query":"label index outside num_classes device assert","document_id":"pytorch-device-side-assert","label":1,"requested_version":"2.6"}
+{"query":"label index outside num_classes device assert","document_id":"pytorch-cuda-unavailable","label":0,"requested_version":"2.6"}
+{"query":"eval no gradients inference_mode no_grad","document_id":"pytorch-inference-mode","label":1,"requested_version":"2.6"}
+{"query":"eval no gradients inference_mode no_grad","document_id":"pytorch-cuda-oom","label":0,"requested_version":"2.6"}
+{"query":"tokenizer padding token missing eos","document_id":"transformers-padding-token","label":1,"requested_version":"4.46"}
+{"query":"tokenizer padding token missing eos","document_id":"transformers-tokenizer-parallelism","label":0,"requested_version":"4.46"}
+{"query":"device_map auto accelerate import error","document_id":"transformers-device-map","label":1,"requested_version":"4.46"}
+{"query":"device_map auto accelerate import error","document_id":"transformers-offline-cache","label":0,"requested_version":"4.46"}
+{"query":"offline local_files_only cache snapshot","document_id":"transformers-offline-cache","label":1,"requested_version":"4.46"}
+{"query":"offline local_files_only cache snapshot","document_id":"transformers-device-map","label":0,"requested_version":"4.46"}
+{"query":"tokenizers parallelism fork deadlock warning","document_id":"transformers-tokenizer-parallelism","label":1,"requested_version":"4.46"}
+{"query":"tokenizers parallelism fork deadlock warning","document_id":"transformers-padding-token","label":0,"requested_version":"4.46"}
+{"query":"4.46 TrainingArguments eval_strategy","document_id":"transformers-eval-strategy-446","label":1,"requested_version":"4.46"}
+{"query":"4.46 TrainingArguments eval_strategy","document_id":"transformers-evaluation-strategy-430","label":0,"requested_version":"4.46"}
+{"query":"4.30 TrainingArguments evaluation_strategy","document_id":"transformers-evaluation-strategy-430","label":1,"requested_version":"4.30"}
+{"query":"4.30 TrainingArguments evaluation_strategy","document_id":"transformers-eval-strategy-446","label":0,"requested_version":"4.30"}
+{"query":"FastAPI JSON body validation 422","document_id":"fastapi-422-validation","label":1,"requested_version":"0.115"}
+{"query":"FastAPI JSON body validation 422","document_id":"fastapi-cors","label":0,"requested_version":"0.115"}
+{"query":"async blocking event loop latency","document_id":"fastapi-blocking-async","label":1,"requested_version":"0.115"}
+{"query":"async blocking event loop latency","document_id":"fastapi-background-tasks","label":0,"requested_version":"0.115"}
+{"query":"durable long job queue not BackgroundTasks","document_id":"fastapi-background-tasks","label":1,"requested_version":"0.115"}
+{"query":"durable long job queue not BackgroundTasks","document_id":"fastapi-blocking-async","label":0,"requested_version":"0.115"}
+{"query":"Pydantic v2 model_dump migration","document_id":"fastapi-pydantic-v2","label":1,"requested_version":"0.100"}
+{"query":"Pydantic v2 model_dump migration","document_id":"fastapi-422-validation","label":0,"requested_version":"0.100"}
+{"query":"browser cross origin allow_origins","document_id":"fastapi-cors","label":1,"requested_version":"0.115"}
+{"query":"browser cross origin allow_origins","document_id":"fastapi-422-validation","label":0,"requested_version":"0.115"}

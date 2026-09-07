@@ -1,0 +1,20 @@
+services:
+  devassist:
+    build:
+      context: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      DEVASSIST_ROOT: /app
+      DEVASSIST_DATA_PATH: /app/data/sample/knowledge_base.jsonl
+      DEVASSIST_EVAL_PATH: /app/data/evaluation/golden_queries.jsonl
+      DEVASSIST_FEEDBACK_PATH: /app/data/runtime/feedback.jsonl
+      DEVASSIST_RERANKER_WEIGHTS_PATH: /app/artifacts/reranker/weights.json
+      DEVASSIST_RATE_LIMIT_REQUESTS: "60"
+      DEVASSIST_RATE_LIMIT_WINDOW_SECONDS: "60"
+    volumes:
+      - devassist-runtime:/app/data/runtime
+    restart: unless-stopped
+
+volumes:
+  devassist-runtime:

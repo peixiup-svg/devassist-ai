@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-06T13:33:26.078979+00:00",
+    "scope": "in-process offline benchmark; excludes HTTP/network/LLM latency",
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "documents": 21,
+    "requests": 200,
+    "concurrency": 20
+  },
+  "results": {
+    "successes": 200,
+    "errors": 0,
+    "error_rate": 0.0,
+    "throughput_requests_per_second": 466.08,
+    "mean_latency_ms": 26.839,
+    "p50_latency_ms": 17.762,
+    "p95_latency_ms": 70.187,
+    "p99_latency_ms": 137.784,
+    "wall_seconds": 0.429
+  }
+}
